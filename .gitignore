@@ -1,0 +1,14 @@
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+lib
+node_modules
+
+*.sublime*
+
+psd
+thumb
+sketch
