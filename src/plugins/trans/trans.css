@@ -1,0 +1,51 @@
+#target{
+	height: 160px;
+	width: 200px;
+	border:1px solid #000;
+	position: relative;
+}
+.spin{
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border:2px solid pink;
+}
+.spin:hover{
+	cursor: pointer;
+}
+.dot{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: 1px solid pink;
+	border-radius: 50%;
+	background: #fff;
+}
+.left{
+	top:50%;
+	left: -6px;
+	transform: translateY(-50%);
+	cursor: w-resize;
+}
+.top{
+	top:-6px;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: n-resize;
+}
+.right{
+	top:50%;
+	right: -6px;
+	transform: translateY(-50%);
+	cursor: e-resize;
+}
+.bottom{
+	left:50%;
+	bottom:-6px;
+	transform: translateX(-50%);
+	cursor: s-resize;
+}
