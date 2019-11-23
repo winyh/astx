@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://winyh.github.io/astx/">
-    <img width="200" src="https://github.com/winyh/astx/blob/master/public/bear.svg">
+    <img width="300" src="https://github.com/winyh/astx/blob/master/public/bear.svg">
   </a>
 </p>
 
@@ -15,11 +15,11 @@
 </div>
 
 
-构建一个可视化搭建平台，通过拖拽的方式构建中台，生成完整的项目工程 [wiki](https://github.com/winyh/astx/wiki)
+基于React技术栈构建一个可视化搭建平台，通过拖拽的方式构建中台，生成完整的项目工程 [wiki](https://github.com/winyh/astx/wiki)
 
 ### 安装
 ```
-npm install 
+yarn install 
 ```
 
 ### 启动
@@ -45,7 +45,8 @@ yarn build
 ### Todo List
 
 * 用 Typescript 改写
-* 可视化拖拽构建中台
+* 可视化拖拽生成React.jsx 文件构建中台
+* 在线生成完整的工程目录，开箱即用
 
 
 ### 参考平台
