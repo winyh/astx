@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Tabs, Icon } from 'antd';
+import { Tabs, Icon, Button } from 'antd';
 import { antdImport } from '../../help/antd';
 import * as antd from 'antd';
 
 import "./index.scss"
 
 const { TabPane } = Tabs;
+
+console.log(Button.propTypes)
 
 class Tool extends Component { 
   constructor(props){
@@ -45,22 +47,6 @@ class Tool extends Component {
                 )) 
               }
               
-
-              <div className="component">
-                <div className="item">
-                  <Icon type="table" />
-                  <br />
-                  表格
-                </div>
-              </div>
-
-              <div className="component">
-                <div className="item">
-                  <Icon type="table" />
-                  <br />
-                  表格
-                </div>
-              </div>
             </div>  
           </TabPane>
           <TabPane tab={<Icon type="form" />} key="2">
