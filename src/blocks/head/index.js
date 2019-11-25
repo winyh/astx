@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon } from "antd"
+import { Icon, Tooltip } from "antd"
 import "./index.scss"
 
 class Head extends Component { 
@@ -19,23 +19,39 @@ class Head extends Component {
 
         <div className="action">
           <div className="item">
-            <Icon type="arrow-left" />
+            <Tooltip title="撤销">
+              <Icon type="arrow-left" />
+            </Tooltip>
           </div>
 
           <div className="item">
-            <Icon type="arrow-right" />
+            <Tooltip  title="恢复">
+              <Icon type="arrow-right" />
+            </Tooltip>
           </div>
 
           <div className="item">
-            <Icon type="eye" />
+            <Tooltip  title="源码">
+              <Icon type="codepen" />
+            </Tooltip>
+          </div>
+
+          <div className="item">
+            <Tooltip  title="预览">
+              <Icon type="eye" />
+            </Tooltip>
           </div>
           
           <div className="item">
-            <Icon type="cloud-download" />
+            <Tooltip  title="下载">
+              <Icon type="cloud-download" />
+            </Tooltip>
           </div>
 
           <div className="item">
-            <Icon type="delete" />
+            <Tooltip  title="清空">
+              <Icon type="delete" />
+            </Tooltip>
           </div>
 
           <div className="item">
