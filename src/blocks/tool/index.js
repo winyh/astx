@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./index.scss"
 
-class Stage extends Component { 
+class Tool extends Component { 
   constructor(props){
     super(props)
     this.state = {
@@ -11,12 +11,12 @@ class Stage extends Component {
 
   render(){
     return(
-      <div className="stage">
-        1
+      <div className="tool">
+        配置面板工具
       </div>
     )
   }
 
 }
 
-export default Stage;
+export default Tool;

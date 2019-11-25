@@ -1,3 +1,22 @@
+@import '~antd/dist/antd.css';
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+.main{
+  display: flex;
+  justify-content: space-between;
+}
+.main .canvas{
+  flex: 1;
+  height: calc(100vh - 60px);
+  overflow: auto;
+}
+
+.main .tool{
+  width: 300px;
+}
+
 .App {
   text-align: center;
 }
