@@ -4,8 +4,14 @@
 	align-items:center;
 	padding:0 20px;
 	color: #fff;
+	font-size:18px;
 	height: 40px;
 	background: #373d49;
+	.logo{
+		a{
+			color: #fff;
+		}
+	}
 	.action{
 		display: flex;
 		.item{

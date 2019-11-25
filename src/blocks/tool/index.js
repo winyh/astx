@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Tabs, Icon } from 'antd';
+import { antdImport } from '../../help/antd';
+import * as antd from 'antd';
+
 import "./index.scss"
 
 const { TabPane } = Tabs;
@@ -8,20 +11,57 @@ class Tool extends Component {
   constructor(props){
     super(props)
     this.state = {
-
+      components: []
     }
   }
 
   callback = (key) => {
     console.log(key)
+  }
+
+  componentDidMount(){
+    this.setState({
+      components: antdImport(antd)
+    })
   } 
 
   render(){
+    const { components } = this.state
     return(
       <div className="tool">
         <Tabs defaultActiveKey="1" onChange={this.callback}>
           <TabPane tab={<Icon type="appstore" />} key="1">
-            预置组件库
+            <div className="alls">
+
+              { 
+                components.map( (item, index) => (
+                  <div className="component" key={index} tag={item.tag} draggable="true">
+                    <div className="item">
+                      <Icon type={item.icon} />
+                      <br />
+                      { item.label }
+                    </div>
+                  </div>
+                )) 
+              }
+              
+
+              <div className="component">
+                <div className="item">
+                  <Icon type="table" />
+                  <br />
+                  表格
+                </div>
+              </div>
+
+              <div className="component">
+                <div className="item">
+                  <Icon type="table" />
+                  <br />
+                  表格
+                </div>
+              </div>
+            </div>  
           </TabPane>
           <TabPane tab={<Icon type="form" />} key="2">
             当前组件编辑

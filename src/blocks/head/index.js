@@ -14,7 +14,7 @@ class Head extends Component {
     return(
       <div className="head">
         <div className="logo">
-          ASTX
+          <a href="https://github.com/winyh/astx" target="_blank" rel="noopener noreferrer">ASTX</a>
         </div>
 
         <div className="action">
