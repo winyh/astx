@@ -37,7 +37,7 @@ class Tool extends Component {
 
               { 
                 components.map( (item, index) => (
-                  <div className="component" key={index} tag={item.tag} draggable="true">
+                  <div className="component" key={index} tag={item.tag}>
                     <div className="item">
                       <Icon type={item.icon} />
                       <br />

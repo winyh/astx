@@ -12,7 +12,7 @@ class Stage extends Component {
   render(){
     return(
       <div className="stage">
-        主操作区
+        
       </div>
     )
   }
