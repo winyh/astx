@@ -37,7 +37,6 @@ yarn install
 
 ```
 yarn start
-
 ```
 
 ### 打包
