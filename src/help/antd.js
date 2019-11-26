@@ -1,11 +1,9 @@
 const antdImport = (antd) => {
-	let LocaleProvider, ConfigProvider, version, Mentions
-	console.log(antd)
 	let antds = Object.keys(antd);
 	console.log(antds)
-	console.log(LocaleProvider, ConfigProvider, version, Mentions)
-	let components = antds.map( (item) => {
-		let res = {}
+	let components = []
+	antds.map( (item) => {
+		let res 
 		switch(item){
 			case "Affix":
 				res = {
@@ -117,13 +115,6 @@ const antdImport = (antd) => {
 					tag:"Col",
 					label:"栅格列",
 					icon:"column-height"
-				}
-				break;
-			case "ConfigProvider":
-				res = {
-					tag:"ConfigProvider",
-					label:"全局配置",
-					icon:"thunderbolt"
 				}
 				break;
 			case "Comment":
@@ -336,6 +327,13 @@ const antdImport = (antd) => {
 					icon:"pic-left"
 				}
 				break;
+			case "Slider":
+				res = {
+					tag:"Slider",
+					label:"滑动输入",
+					icon:"sliders"
+				}
+				break;
 			case "Spin":
 				res = {
 					tag:"Spin",
@@ -435,11 +433,13 @@ const antdImport = (antd) => {
 				}
 				break;
 			default:
-				res = {
-					tag:"",
-					label:"空白",
-					icon:"border"
-				}
+				
+		}
+
+		if(res){
+			components.push(res)
+		} else {
+			console.log(item)
 		}
 
 		return res

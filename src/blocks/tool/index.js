@@ -7,7 +7,8 @@ import "./index.scss"
 
 const { TabPane } = Tabs;
 
-console.log(Button.propTypes)
+// console.log(Button.propTypes)
+console.log(Button.defaultProps)
 
 class Tool extends Component { 
   constructor(props){
@@ -49,12 +50,15 @@ class Tool extends Component {
               
             </div>  
           </TabPane>
+
           <TabPane tab={<Icon type="form" />} key="2">
             当前组件编辑
           </TabPane>
+
           <TabPane tab={<Icon type="setting" />} key="3">
             页面配置
           </TabPane>
+          
         </Tabs>
       </div>
     )
