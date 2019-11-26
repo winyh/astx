@@ -48,6 +48,10 @@ yarn build
 
 [https://winyh.github.io/astx](https://winyh.github.io/astx/)
 
+### 运行预览
+
+![](https://github.com/winyh/astx/blob/master/public/run.png)
+
 ### 贡献代码
 欢迎贡献代码，代码规范请查看 [wiki](https://github.com/winyh/astx/wiki)
 
