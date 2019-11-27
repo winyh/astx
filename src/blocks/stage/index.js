@@ -1,21 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { useDrop } from 'react-dnd';
 import "./index.scss"
 
 import ItemTypes from '../../help/type';
-
-const style = {
-  height: '12rem',
-  width: '12rem',
-  marginRight: '1.5rem',
-  marginBottom: '1.5rem',
-  color: 'white',
-  padding: '1rem',
-  textAlign: 'center',
-  fontSize: '1rem',
-  lineHeight: 'normal',
-  float: 'left',
-}
 
 class Stage extends Component { 
   constructor(props){
@@ -27,33 +14,33 @@ class Stage extends Component {
 
   render(){
 
-    const Dustbin = () => {
+    const Stage = () => {
       const [{ canDrop, isOver }, drop] = useDrop({
         accept: ItemTypes.BOX,
-        drop: () => ({ name: 'Dustbin' }),
+        drop: () => ({ name: 'Stage' }),
         collect: monitor => ({
           isOver: monitor.isOver(),
           canDrop: monitor.canDrop(),
         }),
       })
       const isActive = canDrop && isOver
-      let backgroundColor = '#222'
+      let backgroundColor = '#eee'
       if (isActive) {
         backgroundColor = 'darkgreen'
       } else if (canDrop) {
         backgroundColor = 'darkkhaki'
       }
       return (
-        <div ref={drop} style={{ ...style, backgroundColor }}>
+        <div ref={drop} style={{ backgroundColor }} className="stage">
           {isActive ? 'Release to drop' : 'Drag a box here'}
         </div>
       )
     }
 
     return(
-      <div className="stage">
-        <Dustbin />
-      </div>
+      <Fragment>
+        <Stage />
+      </Fragment>
     )
   }
 
