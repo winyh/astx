@@ -3,6 +3,9 @@ import { Tabs, Icon, Button } from 'antd';
 import { antdImport } from '../../help/antd';
 import * as antd from 'antd';
 
+import { useDrag } from 'react-dnd'
+import ItemTypes from '../../help/type'
+
 import "./index.scss"
 
 const { TabPane } = Tabs;
@@ -30,6 +33,41 @@ class Tool extends Component {
 
   render(){
     const { components } = this.state
+
+    const Box = (props) => {
+      const { item } = props;
+      const { name } = item;
+      const [{ isDragging }, drag] = useDrag({
+        item: { name, type: ItemTypes.BOX },
+        end: (item, monitor) => {
+          const dropResult = monitor.getDropResult()
+          if (item && dropResult) {
+            alert(`You dropped ${item.name} into ${dropResult.name}!`)
+          }
+        },
+        collect: monitor => ({
+          isDragging: monitor.isDragging(),
+        }),
+      })
+      const opacity = isDragging ? 0.4 : 1
+      
+      const style = isDragging ? {
+        border: '1px dashed gray',
+        backgroundColor: 'white',
+        cursor: 'move'
+      } : null
+
+      return (
+        <div ref={drag} style={{ ...style, opacity }} className="component" tag={item.tag}>
+          <div className="item">
+            <Icon type={item.icon} />
+            <br />
+            { item.label }
+          </div>
+        </div>
+      )
+    }
+
     return(
       <div className="tool">
         <Tabs defaultActiveKey="1" onChange={this.callback}>
@@ -38,13 +76,7 @@ class Tool extends Component {
 
               { 
                 components.map( (item, index) => (
-                  <div className="component" key={index} tag={item.tag}>
-                    <div className="item">
-                      <Icon type={item.icon} />
-                      <br />
-                      { item.label }
-                    </div>
-                  </div>
+                  <Box item={item} key={index} />
                 )) 
               }
               
