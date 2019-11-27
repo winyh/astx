@@ -26,7 +26,7 @@ class Stage extends Component {
       const isActive = canDrop && isOver
       let backgroundColor = '#eee'
       if (isActive) {
-        backgroundColor = 'darkgreen'
+        backgroundColor = 'silver'
       } else if (canDrop) {
         backgroundColor = 'darkkhaki'
       }
