@@ -35,14 +35,14 @@ class Tool extends Component {
     const { components } = this.state
 
     const Box = (props) => {
-      const { item } = props;
-      const { name } = item;
+      const { option } = props;
+      const { name, tag, icon, label } = option;
       const [{ isDragging }, drag] = useDrag({
         item: { name, type: ItemTypes.BOX },
         end: (item, monitor) => {
           const dropResult = monitor.getDropResult()
           if (item && dropResult) {
-            alert(`You dropped ${item.name} into ${dropResult.name}!`)
+            alert(`You dropped ${tag} into ${dropResult.name}!`)
           }
         },
         collect: monitor => ({
@@ -58,11 +58,11 @@ class Tool extends Component {
       } : null
 
       return (
-        <div ref={drag} style={{ ...style, opacity }} className="component" tag={item.tag}>
+        <div ref={drag} style={{ ...style, opacity }} className="component" tag={tag}>
           <div className="item">
-            <Icon type={item.icon} />
+            <Icon type={icon} />
             <br />
-            { item.label }
+            { label }
           </div>
         </div>
       )
@@ -76,7 +76,7 @@ class Tool extends Component {
 
               { 
                 components.map( (item, index) => (
-                  <Box item={item} key={index} />
+                  <Box option={item} key={index} />
                 )) 
               }
               
