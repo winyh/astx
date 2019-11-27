@@ -81,10 +81,16 @@ class Head extends Component {
               <Icon type="eye" />
             </Tooltip>
           </div>
+
+          <div className="item">
+            <Tooltip  title="发布">
+              <Icon type="cloud-upload" />
+            </Tooltip>
+          </div>
           
           <div className="item">
             <Tooltip  title="下载">
-              <Icon type="cloud-download" />
+              <Icon type="download" />
             </Tooltip>
           </div>
 

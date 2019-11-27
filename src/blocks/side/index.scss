@@ -1,0 +1,19 @@
+.side{
+	background: #373d49;
+	.bar{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		.wrap{
+			margin: 0;
+			padding: 0;
+			li{
+				color: #fff;
+				list-style: none;
+				font-size: 18px;
+				margin-top: 20px;
+			}
+		}
+	}
+}
