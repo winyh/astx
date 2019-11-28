@@ -44,7 +44,11 @@ yarn start
 yarn build
 ```
 
-### demo(文档待完善)
+### 文档
+
+文档请查看 [wiki](https://github.com/winyh/astx/wiki)
+
+### 在线demo
 
 [https://winyh.github.io/astx](https://winyh.github.io/astx/)
 
