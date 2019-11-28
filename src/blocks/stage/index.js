@@ -18,7 +18,7 @@ class Stage extends Component {
 
   render(){
 
-    const Stage = () => {
+    const Done = () => {
       const [{ canDrop, isOver }, drop] = useDrop({
         accept: ItemTypes.BOX,
         drop: (item, monitor) => {
@@ -40,15 +40,16 @@ class Stage extends Component {
         backgroundColor = 'darkkhaki'
       }
       return (
-        <div ref={drop} style={{ backgroundColor }} id="stage" className="stage">
+        <div ref={drop} style={{ backgroundColor }} >
           {isActive ? 'Release to drop' : 'Drag a box here'}
+          <div  id="stage" className="stage"></div>  
         </div>
       )
     }
 
     return(
       <Fragment>
-        <Stage />
+        <Done />
       </Fragment>
     )
   }
