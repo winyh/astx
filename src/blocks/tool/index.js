@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Tabs, Icon, Button } from 'antd';
+import { Tabs, Icon } from 'antd';
 import { antdImport } from '../../help/antd';
 import * as antd from 'antd';
+
 
 import { useDrag } from 'react-dnd'
 import ItemTypes from '../../help/type'
@@ -11,7 +12,8 @@ import "./index.scss"
 const { TabPane } = Tabs;
 
 // console.log(Button.propTypes)
-console.log(Button.defaultProps)
+// console.log(Button.defaultProps)
+console.log(antd.Button.defaultProps)
 
 class Tool extends Component { 
   constructor(props){
@@ -27,7 +29,7 @@ class Tool extends Component {
 
   componentDidMount(){
     this.setState({
-      components: antdImport(antd)
+      components: antdImport()
     })
   } 
 
@@ -36,9 +38,9 @@ class Tool extends Component {
 
     const Box = (props) => {
       const { option } = props;
-      const { name, tag, icon, label } = option;
+      const { tag, icon, label } = option;
       const [{ isDragging }, drag] = useDrag({
-        item: { name, type: ItemTypes.BOX },
+        item: { name:tag, type: ItemTypes.BOX },
         end: (item, monitor) => {
           const dropResult = monitor.getDropResult()
           if (item && dropResult) {

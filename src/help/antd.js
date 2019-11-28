@@ -1,4 +1,6 @@
-const antdImport = (antd) => {
+import * as antd from 'antd';
+
+const antdImport = () => {
 	let antds = Object.keys(antd);
 	console.log(antds)
 	let components = []

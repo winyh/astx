@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { useDrop } from 'react-dnd';
-import "./index.scss"
 
+import { generateInitJson } from '../../help';
 import ItemTypes from '../../help/type';
+
+import "./index.scss"
 
 class Stage extends Component { 
   constructor(props){
@@ -17,7 +19,11 @@ class Stage extends Component {
     const Stage = () => {
       const [{ canDrop, isOver }, drop] = useDrop({
         accept: ItemTypes.BOX,
-        drop: () => ({ name: 'Stage' }),
+        drop: (item, monitor) => {
+          let json = generateInitJson(item.name)
+          console.log(json)
+          return { name: 'Stage' }
+        },
         collect: monitor => ({
           isOver: monitor.isOver(),
           canDrop: monitor.canDrop(),
