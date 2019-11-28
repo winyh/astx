@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
+import ReactDOM from 'react-dom';
 import { useDrop } from 'react-dnd';
 
+import { Compile } from "../../core/compile";
 import { generateInitJson } from '../../help';
 import ItemTypes from '../../help/type';
 
@@ -22,6 +24,7 @@ class Stage extends Component {
         drop: (item, monitor) => {
           let json = generateInitJson(item.name)
           console.log(json)
+          ReactDOM.render(Compile(json), document.getElementById("stage"));
           return { name: 'Stage' }
         },
         collect: monitor => ({
@@ -37,7 +40,7 @@ class Stage extends Component {
         backgroundColor = 'darkkhaki'
       }
       return (
-        <div ref={drop} style={{ backgroundColor }} className="stage">
+        <div ref={drop} style={{ backgroundColor }} id="stage" className="stage">
           {isActive ? 'Release to drop' : 'Drag a box here'}
         </div>
       )
