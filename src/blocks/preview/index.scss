@@ -1,0 +1,28 @@
+.mobile{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 736px;
+	width: 414px;
+	margin: 100px 0;
+	box-shadow: 0px 1px 4px #bbb;
+}
+.view-btns{
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	height: 40px;
+	padding: 20px;
+	width: 140px;
+	border-radius: 20px;
+	background: rgba(0,0,0,.1);
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	.btn{
+		.anticon{
+			font-size:20px;
+		}
+	}
+}

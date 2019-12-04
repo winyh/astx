@@ -24,6 +24,7 @@ class Stage extends Component {
         drop: (item, monitor) => {
           let json = generateInitJson(item.name)
           console.log(json)
+          localStorage.setItem("tree", JSON.stringify(json))
           ReactDOM.render(Compile(json), document.getElementById("stage"));
           return { name: 'Stage' }
         },

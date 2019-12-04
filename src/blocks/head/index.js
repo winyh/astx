@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import { Icon, Tooltip, Modal, message } from "antd"
 import "./index.scss"
 
@@ -78,7 +79,9 @@ class Head extends Component {
 
           <div className="item">
             <Tooltip  title="预览">
-              <Icon type="eye" />
+              <Link to="/preview">
+                <Icon type="eye" />
+              </Link>
             </Tooltip>
           </div>
 
