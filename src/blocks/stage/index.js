@@ -16,6 +16,11 @@ class Stage extends Component {
     }
   }
 
+  componentDidMount(){
+    const json = JSON.parse(localStorage.getItem("tree")) || ""
+    ReactDOM.render(Compile(json), document.getElementById("stage"));
+  }
+
   render(){
 
     const Dustbin = () => {
