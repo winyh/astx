@@ -1,6 +1,6 @@
 import * as antd from 'antd';
 
-import { propsTree } from "./antd"
+import { props as propsTree } from "./props"
 
 const uuidv4 = require('uuid/v4');
 
