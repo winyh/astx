@@ -1,8 +1,11 @@
 import * as antd from 'antd';
 
+import { props  } from "./props";
+
+var propsTree = {}
+
 const antdImport = () => {
 	let antds = Object.keys(antd);
-	console.log(antds)
 	let components = []
 	antds.map( (item) => {
 		let res 
@@ -439,6 +442,7 @@ const antdImport = () => {
 		}
 
 		if(res){
+			propsTree[item] = props[item]
 			components.push(res)
 		} else {
 			console.log(item)
@@ -451,5 +455,6 @@ const antdImport = () => {
 }
 
 export {
-	antdImport
+	antdImport,
+	propsTree
 }
