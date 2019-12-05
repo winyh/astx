@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { Link } from "react-router-dom";
 import { Icon, Tooltip, Modal, message } from "antd"
 import "./index.scss"
@@ -42,6 +43,9 @@ class Head extends Component {
       cancelText: '取消',
       onOk() {
         console.log('OK');
+        const stage = document.getElementById('stage')
+        localStorage.removeItem("tree")
+        ReactDOM.unmountComponentAtNode(stage)
         message.success("清空成功！")
       },
       onCancel() {
