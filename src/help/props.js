@@ -12,6 +12,7 @@ var props = {
 			height:"100px",
 			width:"200px"
 		},
+		type:"primary",
 		children:["Click Me"]
 	},
 	Calendar:{},

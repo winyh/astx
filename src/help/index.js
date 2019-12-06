@@ -4,7 +4,7 @@ import { props as propsTree } from "./props"
 
 const uuidv4 = require('uuid/v4');
 
-const generateUUID = () => uuidv4()
+const generateUUID = () => `winyh${uuidv4()}`
 
 const getJsxClass = (name) => antd[name]
 

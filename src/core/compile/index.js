@@ -2,8 +2,13 @@ import React from 'react';
 import { getJsxClass } from "../../help";
 
 const Compile = (json) => {
-    let type = getJsxClass(json.type)
-    let props = json.props
+    let jsxClass = getJsxClass(json.type)
+    let { tag, id } = json
+    let props = { 
+        ...json.props, 
+        id,
+        tag 
+    }
     let children = []
 
     if (json.children) {
@@ -15,7 +20,7 @@ const Compile = (json) => {
         }
     }
 
-    return React.createElement(type, { ...props }, ...children)
+    return React.createElement(jsxClass, { ...props }, ...children)
 }
 
 export {
