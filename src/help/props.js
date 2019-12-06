@@ -11,7 +11,8 @@ var props = {
 		style:{
 			height:"100px",
 			width:"200px"
-		}
+		},
+		children:["Click Me"]
 	},
 	Calendar:{},
 	Card:{},
@@ -53,7 +54,8 @@ var props = {
 	Result:{},
 	Row:{
 		style:{
-			height:"200px"
+			height:"200px",
+			border: "1px dashed blue"
 		}
 	},
 	Select:{},
