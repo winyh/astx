@@ -19,7 +19,6 @@ class Stage extends Component {
   componentDidMount(){
     const json = JSON.parse(localStorage.getItem("tree")) || ""
     const stage = document.getElementById("stage");
-    console.log(json)
     if(json){
       ReactDOM.render(Compile(json), stage);
     }

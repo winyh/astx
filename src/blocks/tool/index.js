@@ -3,7 +3,6 @@ import { Tabs, Icon } from 'antd';
 import { antdImport } from '../../help/antd';
 import * as antd from 'antd';
 
-
 import { useDrag } from 'react-dnd'
 import ItemTypes from '../../help/type'
 
