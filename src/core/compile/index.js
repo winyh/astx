@@ -3,6 +3,7 @@ import { getJsxClass } from "../../help";
 
 const Compile = (json) => {
     let { tag, id } = json
+    console.log(tag, id)
     let jsxClass = getJsxClass(json.tag)
     let props = {
         ...json.props,

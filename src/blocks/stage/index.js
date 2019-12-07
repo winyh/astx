@@ -33,11 +33,11 @@ class Stage extends Component {
       const { tag } = e.target
       const id = getUuid(e.target)
       const { stage } = this.props
-      if(id){
+      if(id && id.indexOf("astx") !== -1){
         stage.setActiveId(id)
         stage.setActiveTag(tag)
       } else {
-        throw new Error("请检查当前组件是否具有id属性（属性值特征：astx+....）")
+        console.warn("请检查当前组件是否具有id属性（属性值特征：astx+....）")
       }
     })
   } 

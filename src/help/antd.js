@@ -6,20 +6,6 @@ const antdImport = () => {
 	antds.map( (item) => {
 		let res 
 		switch(item){
-			case "Affix":
-				res = {
-					tag:item,
-					label:"固钉",
-					icon:"pushpin"
-				}
-				break;
-			case "Anchor":
-				res = {
-					tag:item,
-					label:"锚点",
-					icon:"number"
-				}
-				break;
 			case "AutoComplete":
 				res = {
 					tag:item,
@@ -440,7 +426,8 @@ const antdImport = () => {
 		if(res){
 			components.push(res)
 		} else {
-			console.log(item)
+			// 这里是 不需要添加到预置组件库的组件
+			// console.log(item)
 		}
 
 		return res

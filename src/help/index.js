@@ -30,12 +30,7 @@ const getUuid = (ele) => {
 	while(!ele.id){
 		ele = ele.parentNode
 	}
-
-	if(ele.id.indexOf("astx") !== -1){
-		return ele.id
-	} else {
-		return false
-	}
+	return ele.id
 }
 
 export {
