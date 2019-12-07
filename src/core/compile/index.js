@@ -2,12 +2,12 @@ import React from 'react';
 import { getJsxClass } from "../../help";
 
 const Compile = (json) => {
-    let jsxClass = getJsxClass(json.type)
     let { tag, id } = json
-    let props = { 
-        ...json.props, 
+    let jsxClass = getJsxClass(json.tag)
+    let props = {
+        ...json.props,
         id,
-        tag 
+        tag
     }
     let children = []
 

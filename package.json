@@ -89,6 +89,7 @@
   },
   "devDependencies": {
     "node-sass": "^4.13.0",
+    "qs": "^6.9.1",
     "serve": "^11.2.0"
   },
   "homepage": "http://winyh.github.io/astx",

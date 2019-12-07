@@ -14,6 +14,12 @@ import './App.css';
 @observer
 class App extends Component{
 
+  componentDidMount(){
+
+  }
+
+
+
   render(){
     return (
       <DndProvider backend={HTML5Backend}>

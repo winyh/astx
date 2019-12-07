@@ -14,6 +14,11 @@ class StageStore {
     }
 
     @action.bound
+    setActiveId (id){
+        this.activeId = id
+    }
+
+    @action.bound
     setActiveTag (tag){
         this.activeTag = tag
     }
