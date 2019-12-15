@@ -10,6 +10,13 @@ class Side extends Component {
     }
   }
 
+  switchViewPort = (viewport) => {
+    console.log(viewport)
+    this.setState({
+      viewport
+    })
+  }
+
   render(){
     return(
       <div className="side">
@@ -49,13 +56,13 @@ class Side extends Component {
 
 
           <ul className="wrap">
-            <li>
+            <li onClick={() => this.switchViewPort("desktop")}>
               <Tooltip placement="right" title="移动端">
                 <Icon type="mobile" />
               </Tooltip>
             </li>
 
-            <li>
+            <li onClick={() => this.switchViewPort("mobile")}>
               <Tooltip placement="right" title="桌面端">
                 <Icon type="desktop" />
               </Tooltip>
@@ -69,11 +76,6 @@ class Side extends Component {
           </ul>
 
         </div>
-        
-
-
-        
-        
         
         
       </div>

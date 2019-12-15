@@ -42,8 +42,10 @@ class Tool extends Component {
         item: { name:tag, type: ItemTypes.BOX },
         end: (item, monitor) => {
           const dropResult = monitor.getDropResult()
+          console.log(dropResult)
           if (item && dropResult) {
-            alert(`You dropped ${tag} into ${dropResult.name}!`)
+            // alert(`You dropped ${tag} into ${dropResult.name}!`)
+            console.log(`You dropped ${tag} into ${dropResult.name}!`)
           }
         },
         collect: monitor => ({

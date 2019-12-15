@@ -88,6 +88,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0",
     "qs": "^6.9.1",
     "serve": "^11.2.0"
