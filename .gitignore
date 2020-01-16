@@ -3,6 +3,7 @@
 logs
 **/*.backup.*
 **/*.back.*
+report.*.json
 
 lib
 node_modules
