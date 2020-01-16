@@ -53,14 +53,18 @@ class Stage extends Component {
       const [{ canDrop, isOver }, drop] = useDrop({
         accept: ItemTypes.BOX,
         drop: (item, monitor) => {
+          console.log(item, monitor.getInitialClientOffset())
           let json = generateInitJson(item.name)
           localStorage.setItem("tree", JSON.stringify(json))
           ReactDOM.render(Compile(json), document.getElementById("stage"));
-          return { name: 'Stage' }
+          return { name: 'Stage', id:'222wsasd' }
+        },
+        hover: (item, monitor) => {
+          console.log(monitor.isOver())
         },
         collect: monitor => ({
           isOver: monitor.isOver(),
-          canDrop: monitor.canDrop(),
+          canDrop: monitor.canDrop()
         }),
       })
       const isActive = canDrop && isOver

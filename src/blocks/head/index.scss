@@ -23,3 +23,36 @@
 		}
 	}
 }
+
+.code-modal{
+	.ant-modal-header{
+		background: #000;
+		border-bottom: 1px solid #373d49;
+		.ant-modal-title{
+			color: #fff;
+		}
+	}
+	.ant-modal-content{
+		background: #000;
+		.ant-modal-close{
+			.ant-modal-close-x{
+				color: #fff;
+			}
+		}
+	}
+	.ant-modal-body{
+		color: #fff;
+	}
+	.ant-modal-footer{
+		border-top: 1px solid #373d49;
+	}
+	.monaco-editor{
+		.margin{
+			background: #000;
+			border-right: 1px solid #373d49;
+		}
+		.monaco-editor-background{
+			background: #000;
+		}
+	}
+}

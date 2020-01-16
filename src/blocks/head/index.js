@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from "react-router-dom";
 import { Icon, Tooltip, Modal, message } from "antd"
+import Code from "./code"
 import "./index.scss"
 
 const { confirm } = Modal
@@ -120,10 +121,11 @@ class Head extends Component {
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
+          bodyStyle={{padding:'0px'}}
+          wrapClassName="code-modal"
+          footer={null}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <Code />
         </Modal>
 
       </div>
