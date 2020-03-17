@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as monaco from 'monaco-editor';
 import MonacoEditor from 'react-monaco-editor';
 
 import "./index.scss"
@@ -8,7 +7,7 @@ class Code extends Component {
   constructor(props){
     super(props)
     this.state = {
-      code: '// type your code...',
+      code: 'console.log(100)',
     }
   }
 
@@ -29,7 +28,6 @@ class Code extends Component {
     return(
       <div className="code">
         <MonacoEditor
-	        width="100%"
 	        height="400"
 	        language="javascript"
 	        theme="vs-dark"

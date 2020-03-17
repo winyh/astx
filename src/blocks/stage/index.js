@@ -27,24 +27,20 @@ class Stage extends Component {
     }
   }
 
-  listenClick = () => {
-    const stage = document.getElementById("stage");
-    stage.addEventListener("click", (e) => {
-      const { tag } = e.target
-      const id = getUuid(e.target)
-      const { stage } = this.props
-      if(id && id.indexOf("astx") !== -1){
-        stage.setActiveId(id)
-        stage.setActiveTag(tag)
-      } else {
-        console.warn("请检查当前组件是否具有id属性（属性值特征：astx+....）")
-      }
-    })
+  clickHandler = (e) => {
+    const { tag } = e.target
+    const id = getUuid(e.target)
+    const { stage } = this.props
+    if(id && id.indexOf("astx") !== -1){
+      stage.setActiveId(id)
+      stage.setActiveTag(tag)
+    } else {
+      console.warn("请检查当前组件是否具有id属性（属性值特征：astx+....）")
+    }
   } 
 
   componentDidMount(){
     this.initRenderFn()
-    this.listenClick()
   }
 
   render(){
@@ -56,6 +52,7 @@ class Stage extends Component {
           console.log(item, monitor.getInitialClientOffset())
           let json = generateInitJson(item.name)
           localStorage.setItem("tree", JSON.stringify(json))
+          console.log(Compile(json))
           ReactDOM.render(Compile(json), document.getElementById("stage"));
           return { name: 'Stage', id:'222wsasd' }
         },
@@ -77,7 +74,7 @@ class Stage extends Component {
       return (
         <div ref={drop} style={{ backgroundColor }} >
           {isActive ? 'Release to drop' : 'Drag a box here'}
-          <div  id="stage" className="stage">
+          <div  id="stage" className="stage" onClick={this.clickHandler}>
             
           </div>  
         </div>

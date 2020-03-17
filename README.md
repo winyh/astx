@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://winyh.github.io/astx/">
-    <img width="300" src="https://github.com/winyh/astx/blob/master/public/bear.svg">
+    <img width="300" src="https://github.com/winyh/astx/blob/master/public/warrior.svg">
   </a>
 </p>
 
 <h1 align="center">astx</h1>
 
-<p align="center">可视化搭建平台 代码自动生成 Less Code Low Code  代号：树棕熊</p>
+<p align="center">可视化搭建平台 代码自动生成 Less Code Low Code   代号：X-MAN</p>
 
 <div align="center">
 
